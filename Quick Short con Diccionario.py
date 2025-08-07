@@ -32,4 +32,14 @@ for i in range(cantidad):
     }
 
 resultado = quick_sort(list(estudiantes.keys()))
-print(resultado)
+
+print("\n--- Estudiantes ordenados por número de carnet ---")
+for carnet in resultado:
+    estudiante = estudiantes[carnet]
+    print(f"\nCarnet: {carnet}")
+    print(f"Nombre: {estudiante['nombre']}")
+    print(f"Edad: {estudiante['edad']}")
+    print(f"Carrera: {estudiante['carrera']}")
+    print(f"Correo: {estudiante['contacto']['correo']}")
+    print(f"Teléfono: {estudiante['contacto']['telefono']}")
+
