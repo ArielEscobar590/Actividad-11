@@ -2,14 +2,10 @@ def quick_sort(lista):
     if len(lista) <= 1:
         return lista
 
-    for carnet in lista.values():
-        pivote = carnet
-        break
-
-
-    menores = [x for x in lista.values() if x < pivote]
-    iguales = [x for x in lista.values()  if x == pivote]
-    mayores = [x for x in lista.values()  if x > pivote]
+    pivote = lista[0]
+    menores = [x for x in lista if x < pivote]
+    iguales = [x for x in lista  if x == pivote]
+    mayores = [x for x in lista  if x > pivote]
 
     return quick_sort(menores) + iguales + quick_sort(mayores)
 
@@ -35,5 +31,5 @@ for i in range(cantidad):
         }
     }
 
-resultado = quick_sort(estudiantes)
+resultado = quick_sort(list(estudiantes.keys()))
 print(resultado)
